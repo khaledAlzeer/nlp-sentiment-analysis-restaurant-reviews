@@ -30,7 +30,12 @@ The goals are to:
 ```
 Raw Text Reviews
       ↓
-Text Cleaning (regex, lowercase, stopwords, stemming)
+Text Cleaning
+  ├── Regex       → remove numbers, punctuation & special characters ([^a-zA-Z])
+  ├── Lowercase   → convert all text to lowercase
+  ├── Tokenization → split sentence into individual words
+  ├── Stopwords   → remove common words (e.g. "the", "is") — keeping "not"
+  └── Stemming    → reduce words to root form (e.g. "loved" → "love")
       ↓
 Bag of Words (CountVectorizer, max_features=1500)
       ↓
